@@ -24,8 +24,7 @@ public interface VoucherMapper {
     @Mappings({
         @Mapping(target = "id", ignore = true),
         @Mapping(target = "createdAt", ignore = true),
-        @Mapping(target = "isActive", ignore = true),
-        @Mapping(target = "user", ignore = true),
+        @Mapping(target = "isActive", ignore = true)
     })
     Voucher toEntityUpdate (CouponUpdateRequest request);
 

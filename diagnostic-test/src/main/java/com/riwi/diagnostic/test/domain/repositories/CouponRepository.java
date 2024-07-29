@@ -1,8 +1,8 @@
 package com.riwi.diagnostic.test.domain.repositories;
 
-import com.riwi.diagnostic.test.domain.entities.Coupon;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.riwi.diagnostic.test.domain.entities.Voucher;
 
-public interface CouponRepository extends JpaRepository<Coupon, String> {
+public interface CouponRepository extends JpaRepository<Voucher, String> {
 
 }

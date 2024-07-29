@@ -24,7 +24,7 @@ public class Sales {
     @OneToMany(mappedBy = "sales", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private List<Coupon> coupons;
+    private List<Voucher> coupons;
 
 
     @ManyToOne(fetch = FetchType.LAZY)

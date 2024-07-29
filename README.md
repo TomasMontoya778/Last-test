@@ -44,7 +44,8 @@ and redemption of coupons, for this reason your cell is asked to develop a syste
 
 [![](https://media.discordapp.net/attachments/1260297785555550329/1267549334698725496/image.png?ex=66a930cf&is=66a7df4f&hm=42b6e1a6c93e3b37bbd9469848823ab881850ead4d1a9643d70fe28ef482a283&=&format=webp&quality=lossless)](http://https://media.discordapp.net/attachments/1260297785555550329/1267549334698725496/image.png?ex=66a930cf&is=66a7df4f&hm=42b6e1a6c93e3b37bbd9469848823ab881850ead4d1a9643d70fe28ef482a283&=&format=webp&quality=lossless)
 
-
+#CLICKUP BOARD
+[![](https://media.discordapp.net/attachments/1260297785555550329/1267558841428480050/Captura_desde_2024-07-29_14-06-04.png?ex=66a939a9&is=66a7e829&hm=5ce999e61413e917dc6e5e97dd887a65617491d73b266ddedfa0e05a38ff1927&=&format=webp&quality=lossless&width=1292&height=629)](http://https://media.discordapp.net/attachments/1260297785555550329/1267558841428480050/Captura_desde_2024-07-29_14-06-04.png?ex=66a939a9&is=66a7e829&hm=5ce999e61413e917dc6e5e97dd887a65617491d73b266ddedfa0e05a38ff1927&=&format=webp&quality=lossless&width=1292&height=629)
 # Environment Configuration
 
 ## Cloning of the Repository

@@ -9,25 +9,26 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "coupon")
+@Table(name = "voucher")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Coupon {
+public class Voucher {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     @Column(length = 30, nullable = false)
     private String name;
     @Column(nullable = false)
-    private Boolean status;
+    private Boolean isActive;
     @Column(nullable = false)
     @Lob
     private String description;
     @Column(nullable = false)
     private Double percentage;
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
     @Column(nullable = false)
     private LocalDateTime expirationDate;

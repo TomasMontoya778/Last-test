@@ -1,19 +1,13 @@
-version: '3.8'
-
 services:
-  db:
-    image: mysql:8.0
-    container_name: riwiTest
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: riwi_db
-      MYSQL_PASSWORD: password
-    ports:
-      - "4000:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql  
-
-volumes:
-  mysql_data:
-    driver: local
+    db:
+        image: mysql:8.0
+        container_name: assessment
+        restart: always
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: assessment_db
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+      

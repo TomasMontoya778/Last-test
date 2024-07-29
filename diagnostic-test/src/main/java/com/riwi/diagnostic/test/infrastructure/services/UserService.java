@@ -2,6 +2,7 @@ package com.riwi.diagnostic.test.infrastructure.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +25,11 @@ public class UserService implements IUserService{
 
     @Override
     public Page<UserResponse> getAll(Pageable pageable) {
-        // TODO Auto-generated method stub
-        return null;
+        int page = pageable.getPageNumber();
+        int size = pageable.getPageSize();
+        Page<User> users = userRepository.findAll(pageable);
+        Page<UserResponse> userResponses = UserMapper.INSTANCE.userPageToUserResponses(users, page, size);
+        return userResponses;
     }
 
     @Override

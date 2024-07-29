@@ -2,12 +2,7 @@ package com.riwi.diagnostic.test.domain.entities;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,19 +22,23 @@ public class Coupon {
     private String name;
     @Column(nullable = false)
     private Boolean status;
-    @Column(length = 100, nullable = false)
+    @Column(nullable = false)
+    @Lob
     private String description;
     @Column(nullable = false)
-    private Double porcentage;
+    private Double percentage;
     @Column(nullable = false)
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
     @Column(nullable = false)
     private LocalDateTime expirationDate;
 
     // Foreign key
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId", referencedColumnName = "id")
     private User user;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "salesId", referencedColumnName = "id")
     private Sales sales;
 
 }

@@ -10,5 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PurchaseResponse {
-    String Id;
+
+    private String Id;
+    private String purchaseId;
+    private Long quantity;
+    private Double totalPrice;
 }

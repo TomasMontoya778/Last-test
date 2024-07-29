@@ -7,5 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PurchaseRequest {
-    String purchaseId;
+
+    private Long quantity;
+    private Double totalPrice;
+
 }

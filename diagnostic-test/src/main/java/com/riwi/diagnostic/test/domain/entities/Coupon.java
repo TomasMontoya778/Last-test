@@ -1,12 +1,12 @@
 package com.riwi.diagnostic.test.domain.entities;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "coupon")
@@ -33,9 +33,6 @@ public class Coupon {
     private LocalDateTime expirationDate;
 
     // Foreign key
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "id")
-    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "salesId", referencedColumnName = "id")

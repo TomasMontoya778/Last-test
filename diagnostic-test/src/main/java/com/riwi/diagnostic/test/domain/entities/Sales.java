@@ -1,9 +1,9 @@
 package com.riwi.diagnostic.test.domain.entities;
 
-import java.util.List;
-
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "sales")

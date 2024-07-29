@@ -1,5 +1,9 @@
 package com.riwi.diagnostic.test.api.error_handler;
 
+
+import com.riwi.diagnostic.test.api.dto.errors.BaseErrorResponse;
+import com.riwi.diagnostic.test.api.dto.errors.ErrorsResp;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,8 +16,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.riwi.diagnostic.test.api.dto.errors.BaseErrorResponse;
-import com.riwi.diagnostic.test.api.dto.errors.ErrorsResp;
+
 
 @RestControllerAdvice
 @ResponseStatus(code = HttpStatus.BAD_REQUEST)

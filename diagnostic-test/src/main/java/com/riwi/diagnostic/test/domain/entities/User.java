@@ -1,10 +1,10 @@
 package com.riwi.diagnostic.test.domain.entities;
 
-import java.time.LocalDateTime;
-import java.util.List;
-
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Data
@@ -26,10 +26,6 @@ public class User {
 
 
     // Foreign key
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = false)
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private List<Coupon> coupons;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = false)
     @ToString.Exclude

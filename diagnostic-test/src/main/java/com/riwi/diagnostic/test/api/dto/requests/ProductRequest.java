@@ -1,14 +1,26 @@
 package com.riwi.diagnostic.test.api.dto.requests;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductRequest {
-    String productId;
+
+
+    @NotBlank(message = "The name is required")
+    private String name;
+
+    @NotBlank(message = "The description is required")
+    private String description;
+
+    @NotNull(message = "The price is required")
+    private Double price;
+
 }

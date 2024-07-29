@@ -1,5 +1,7 @@
 package com.riwi.diagnostic.test.api.dto.response;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CouponResponse {
-    String couponId;
-    
+    private String id;
+    private String status;
+    private String description;
+    private Double percentage;
+    private LocalDateTime createdAt;
+    private LocalDateTime expirationDate;
 }

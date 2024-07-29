@@ -1,6 +1,7 @@
 package com.riwi.diagnostic.test.domain.entities;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.*;
@@ -21,18 +22,15 @@ public class User {
     @Column(length = 100, nullable = false)
     private String email;
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
 
 
-
     // Foreign key
+    
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private List<Coupon> coupons;
-
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = false)
-    @ToString.Exclude
-    @EqualsAndHashCode.Exclude
-    private List<Sales> sales;
+    @Builder.Default
+    private List<Sales> sales = new ArrayList<>();
 }

@@ -28,14 +28,12 @@ public class Coupon {
     @Column(nullable = false)
     private Double percentage;
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
     @Column(nullable = false)
     private LocalDateTime expirationDate;
 
     // Foreign key
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "id")
-    private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "salesId", referencedColumnName = "id")
